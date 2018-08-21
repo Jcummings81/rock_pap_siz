@@ -1,0 +1,19 @@
+
+.container {
+  display: flex;
+}
+
+#choices {
+    width: 100%;
+    
+  }
+  
+  #players {
+    width: 50%;
+    float: left;
+    border-left: solid 1px black;
+  }
+  
+  #score {
+    margin-right: 20%;
+  }

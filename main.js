@@ -8,7 +8,7 @@ var status = null
 var wins = 0
 var losses = 0
 var ties = 0
-
+var temp = null
 //Functions
 
 
@@ -35,46 +35,48 @@ var ties = 0
   function scorekeep() {
       switch(status) {
         case 'tie':
-          return ties += 1
+          return $('#draw').text(ties += 1)
         case 'win':
-          return wins += 1
+        return $('#win').text(wins += 1)
         case 'lose':
-          return losses += 1
+        return $('#loss').text(losses += 1)
         default:
           return
       }
   }
 
-  function game(){
+function game(){
 rock.on('click', function() {
     $('h1').text("Fight!!!")
+    $('#pchs').text("ROCK!")
     user = 'rock'
     comp = computerSelection()
+    $('#cchs').text(comp)
     status = test()
     console.log(user)
     console.log(comp)
-    console.log(status)
-    console.log(scorekeep(status))
+    scorekeep(status)
 })
 paper.on('click', function() {
     $('h1').text("Fight!!!")
+    $('#pchs').text("PAPER!")
     user = 'paper'
     comp = computerSelection()
     status = test()
     console.log(user)
     console.log(comp)
-    console.log(test())
-    console.log(scorekeep(status))
+    scorekeep(status)
 })
 scissors.on('click', function() {
     $('h1').text("Fight!!!")
+    $('#pchs').text("SCISSORS!")
     user = 'scissors'
     comp = computerSelection()
     status = test()
     console.log(user)
     console.log(comp)
     console.log(test())
-    console.log(scorekeep(status))
+    scorekeep(status)
 })
 
 

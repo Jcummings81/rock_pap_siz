@@ -1,19 +1,25 @@
 
 .container {
-  display: flex;
+background-color: aquamarine;
 }
 
+img {
+  height: 200px;
+  width: 200px:
+}
 #choices {
     width: 100%;
     
   }
   
   #players {
-    width: 50%;
+    background-color: bisque;
+    width: 20%;
     float: left;
     border-left: solid 1px black;
   }
   
   #score {
-    margin-right: 20%;
+    float: right;
+    text-align: left;
   }
